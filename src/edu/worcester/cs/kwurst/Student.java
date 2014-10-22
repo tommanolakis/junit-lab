@@ -219,7 +219,8 @@ public class Student
      * @return the student's remaining credits to graduate
      */
     public int getCurrentRemainingCr() {
-        return REQUIRED_CR - currentEarnedCr;
+    	return (currentEarnedCr >= 120)?0:(REQUIRED_CR - currentEarnedCr);
+        
     }
 
     /**
@@ -238,6 +239,6 @@ public class Student
      * @return whether the student is ready to graduate
      */
     public boolean readyToGraduate() {
-        return getCurrentRemainingCr() == 0 && gpa >= 2.0 && lascComplete && majorComplete;
+        return getCurrentRemainingCr() <= 0 && gpa >= 2.0 && lascComplete && majorComplete;
     }
 }

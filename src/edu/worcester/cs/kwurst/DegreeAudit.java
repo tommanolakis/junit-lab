@@ -1,5 +1,6 @@
 package edu.worcester.cs.kwurst;
 
+
 /* 
  * Copyright (C) 2014 Karl R. Wurst
  * 
@@ -47,11 +48,11 @@ public class DegreeAudit
         s1.setGpa(2.5);
         s1.setCurrentEarnedCr(110);
         // Check number of credits remaining.
-        System.out.println(s1.getCurrentRemainingCr());
+        System.out.println("Remaining credits = " + s1.getCurrentRemainingCr());
         // Change credits.
         s1.setCurrentEarnedCr(120);
         // Check number of credits remaining.
-        System.out.println(s1.getCurrentRemainingCr());
+        System.out.println("Remaining credits = " + s1.getCurrentRemainingCr());
         
         // Set LASC and major requirement to be complete.
         s1.setMajorComplete(true);
